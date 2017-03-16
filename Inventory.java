@@ -29,13 +29,14 @@ public class Inventory extends Application{
 
         button = new Button("First Text on the Button");
         button.setText("Click Me, like Alice did!");
-        button.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("I am an anonymous inner class, a handler in this case!  " +
-                        "Thank you using me like this!");
-            }
-        });
+        button.setOnAction(e -> System.out.println("That's me, the lambda expression version!"));
+//        {
+//            @Override
+//            public void handle(ActionEvent event) {
+//                System.out.println("I am an anonymous inner class, a handler in this case!  " +
+//                        "Thank you using me like this!");
+//            }
+//        }
 
         //We need to make a layout!
 
