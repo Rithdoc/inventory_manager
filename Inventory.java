@@ -28,6 +28,7 @@ public class Inventory extends Application{
         window.setTitle("Rithdoc's JavaFX newboston tutorial code");
 
         window.setOnCloseRequest(e -> {
+            e.consume();
             closeProgram();
         });
 
