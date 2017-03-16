@@ -27,7 +27,9 @@ public class Inventory extends Application{
         window = primaryStage;
         window.setTitle("Rithdoc's JavaFX newboston tutorial code");
 
-        window.setOnCloseRequest(e -> closeProgram());
+        window.setOnCloseRequest(e -> {
+            closeProgram();
+        });
 
         button = new Button("Close Program");
         button.setOnAction(e -> closeProgram());
@@ -42,8 +44,12 @@ public class Inventory extends Application{
     }
 
     private void closeProgram(){
-        System.out.println("This code ran.");
-        window.close();
+        Boolean answer = Part.display("MyTitle", "Sure you want to exit?");
+        if(answer)
+            window.close();
+
+        //System.out.println("This code ran.");
+        //window.close();
     }
 
 
