@@ -44,7 +44,7 @@ public class Inventory extends Application{
         StackPane layout2 = new StackPane();
         layout2.getChildren().add(button2);
         scene2 = new Scene(layout2, 600, 300);
-        
+
         window.setScene(scene1);
         window.setTitle("This is the Title of the Stage!");
         window.show();
