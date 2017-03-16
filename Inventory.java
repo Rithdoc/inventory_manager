@@ -1,7 +1,4 @@
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.Event;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
@@ -30,15 +27,6 @@ public class Inventory extends Application{
         button = new Button("First Text on the Button");
         button.setText("Click Me, like Alice did!");
         button.setOnAction(e -> System.out.println("That's me, the lambda expression version!"));
-//        {
-//            @Override
-//            public void handle(ActionEvent event) {
-//                System.out.println("I am an anonymous inner class, a handler in this case!  " +
-//                        "Thank you using me like this!");
-//            }
-//        }
-
-        //We need to make a layout!
 
         StackPane layout = new StackPane();
         layout.getChildren().add(button);
@@ -48,15 +36,6 @@ public class Inventory extends Application{
         primaryStage.show();
 
     }
-//
-//    @Override
-//    public void handle(Event event)
-//    {
-//        if(event.getSource()==button)
-//        {
-//            System.out.println("Aaah, it tingles me, do it again!");
-//        }
-//    }
 
 
 }
