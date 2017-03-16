@@ -31,12 +31,15 @@ public class Inventory extends Application{
         //Label label1 = new Label("Welcome to the first scene!");
 
         button = new Button("Click me like Alice did!");
-        button.setOnAction(e -> Product.display("My Alertbox in my Product class", "Wow, this alertbox is awesome!"));
+        button.setOnAction(e -> {
+            boolean result = Part.display("Windows Title", "Are you sure you want to do that, Dave?");
+            System.out.println(result);
+        });
 
         StackPane layout = new StackPane();
         layout.getChildren().add(button);
         Scene scene = new Scene(layout, 300, 250);
-        
+
 //        //Button 1
 //        Button button1 = new Button("Go to scene 2");
 //        button1.setOnAction(e -> window.setScene(scene2));
