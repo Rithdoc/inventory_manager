@@ -1,4 +1,5 @@
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -9,7 +10,7 @@ import javafx.stage.Stage;
 /**
  * Created by Shaun on 3/14/2017.
  */
-public class Inventory extends Application implements EventHandler{
+public class Inventory extends Application{
 
     Button button;
 
@@ -28,7 +29,13 @@ public class Inventory extends Application implements EventHandler{
 
         button = new Button("First Text on the Button");
         button.setText("Click Me, like Alice did!");
-        button.setOnAction(this);
+        button.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                System.out.println("I am an anonymous inner class, a handler in this case!  " +
+                        "Thank you using me like this!");
+            }
+        });
 
         //We need to make a layout!
 
@@ -40,15 +47,15 @@ public class Inventory extends Application implements EventHandler{
         primaryStage.show();
 
     }
-
-    @Override
-    public void handle(Event event)
-    {
-        if(event.getSource()==button)
-        {
-            System.out.println("Aaah, it tingles me, do it again!");
-        }
-    }
+//
+//    @Override
+//    public void handle(Event event)
+//    {
+//        if(event.getSource()==button)
+//        {
+//            System.out.println("Aaah, it tingles me, do it again!");
+//        }
+//    }
 
 
 }
