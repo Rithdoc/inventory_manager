@@ -2,6 +2,8 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -35,9 +37,25 @@ public class Inventory extends Application{
         button = new Button("Close Program");
         button.setOnAction(e -> closeProgram());
 
+        HBox topMenu = new HBox();
+        Button buttonA = new Button("File");
+        Button buttonB = new Button("Edit");
+        Button buttonC = new Button("View");
+        topMenu.getChildren().addAll(buttonA, buttonB, buttonC);
+
+        VBox leftMenu = new VBox();
+        Button buttonD = new Button("Deal");
+        Button buttonE = new Button("Eat");
+        Button buttonF = new Button("Freeze");
+        leftMenu.getChildren().addAll(buttonD, buttonE, buttonF);
+
+        BorderPane borderPane = new BorderPane();
+        borderPane.setTop(topMenu);
+        borderPane.setLeft(leftMenu);
+
         StackPane layout = new StackPane();
         layout.getChildren().add(button);
-        Scene scene = new Scene(layout, 300, 250);
+        Scene scene = new Scene(borderPane, 300, 250);
 
         window.setScene(scene);
         window.show();
@@ -49,8 +67,6 @@ public class Inventory extends Application{
         if(answer)
             window.close();
 
-        //System.out.println("This code ran.");
-        //window.close();
     }
 
 
