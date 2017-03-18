@@ -65,45 +65,5 @@ public class Inventory extends Application{
         String food = choiceBox.getValue();
         System.out.println(food);
     }
-//
-//    //Handle Checkbox Options
-//    private void handleOptions(CheckBox box1, CheckBox box2, CheckBox box3, CheckBox box4, CheckBox box5){
-//        String message = "User's order:\n";
-//
-//        if(box1.isSelected())
-//        {
-//            message += "Bacon\n";
-//        }
-//        if(box2.isSelected())
-//        {
-//            message += "Tuna\n";
-//        }
-//        if(box3.isSelected())
-//        {
-//            message += "Spinach\n";
-//        }
-//        if(box4.isSelected())
-//        {
-//            message += "Chicken\n";
-//        }
-//        if(box5.isSelected())
-//        {
-//            message += "Cheese\n";
-//        }
-//
-//        System.out.println(message);
-//    }
-//
-//    private boolean isInt(TextField input, String message)
-//    {
-//        try{
-//            int age = Integer.parseInt(input.getText());
-//            System.out.println("User is: " + age);
-//            return true;
-//        }catch(NumberFormatException e){
-//            System.out.println("Error: " + message + " is not a valid age");
-//            return false;
-//        }
-//    }
 
 }
