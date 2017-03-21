@@ -34,7 +34,7 @@ public class Inventory extends Application{
         window.setTitle("ChoiceBox Example");
 
         //Button
-        button = new Button("Order Now!");
+        button = new Button("Click Me!");
 
 
         ChoiceBox<String> choiceBox = new ChoiceBox<>();
@@ -48,7 +48,7 @@ public class Inventory extends Application{
 
         choiceBox.setValue("PineapplePen");
 
-        button.setOnAction(e -> getChoice(choiceBox));
+        //button.setOnAction(e -> getChoice(choiceBox));
 
         //Layout
         VBox layout = new VBox(10);
@@ -61,9 +61,9 @@ public class Inventory extends Application{
 
     }
 
-    private void getChoice(ChoiceBox<String> choiceBox){
-        String food = choiceBox.getValue();
-        System.out.println(food);
-    }
+//    private void getChoice(ChoiceBox<String> choiceBox){
+//        String food = choiceBox.getValue();
+//        System.out.println(food);
+//    }
 
 }
