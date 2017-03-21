@@ -37,10 +37,21 @@ public class Inventory extends Application{
         //Button
         button = new Button("Click Me!");
 
+        comboBox = new ComboBox<>();
+        comboBox.getItems().addAll(
+                "Moana",
+                "Maleficent",
+                "Alice in Wonderland"
+        );
+
+        comboBox.setPromptText("What is your favorite movie?");
+        button.setOnAction(e -> printMovie());
+
+
         //Layout
         VBox layout = new VBox(10);
         layout.setPadding(new Insets(20, 20, 20, 20));
-        layout.getChildren().addAll(button);
+        layout.getChildren().addAll(comboBox, button);
 
         scene = new Scene(layout, 300, 250);
         window.setScene(scene);
@@ -48,5 +59,8 @@ public class Inventory extends Application{
 
     }
 
+    private void printMovie(){
+        System.out.println(comboBox.getValue());
+    }
 
 }
