@@ -48,6 +48,9 @@ public class Inventory extends Application{
 
         choiceBox.setValue("PineapplePen");
 
+        //Listen for selection changes
+        choiceBox.getSelectionModel().selectedItemProperty().addListener((v, oldValue, newValue) -> System.out.println(newValue));
+
         //button.setOnAction(e -> getChoice(choiceBox));
 
         //Layout
