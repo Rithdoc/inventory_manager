@@ -21,6 +21,7 @@ public class Inventory extends Application{
     Stage window;
     Scene scene;
     Button button;
+    ComboBox<String> comboBox;
 
     public static void main(String[] args) {
         launch(args);
@@ -36,27 +37,10 @@ public class Inventory extends Application{
         //Button
         button = new Button("Click Me!");
 
-
-        ChoiceBox<String> choiceBox = new ChoiceBox<>();
-
-        //getItems returns the ObservableList object which you can add items to
-        choiceBox.getItems().add("Apples");
-        choiceBox.getItems().add("Bananas");
-        choiceBox.getItems().add("Pineapple");
-        choiceBox.getItems().add("Pen");
-        choiceBox.getItems().addAll("Ham", "ApplePen", "PineapplePen");
-
-        choiceBox.setValue("PineapplePen");
-
-        //Listen for selection changes
-        choiceBox.getSelectionModel().selectedItemProperty().addListener((v, oldValue, newValue) -> System.out.println(newValue));
-
-        //button.setOnAction(e -> getChoice(choiceBox));
-
         //Layout
         VBox layout = new VBox(10);
         layout.setPadding(new Insets(20, 20, 20, 20));
-        layout.getChildren().addAll(choiceBox, button);
+        layout.getChildren().addAll(button);
 
         scene = new Scene(layout, 300, 250);
         window.setScene(scene);
@@ -64,9 +48,5 @@ public class Inventory extends Application{
 
     }
 
-//    private void getChoice(ChoiceBox<String> choiceBox){
-//        String food = choiceBox.getValue();
-//        System.out.println(food);
-//    }
 
 }
