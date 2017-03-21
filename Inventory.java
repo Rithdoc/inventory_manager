@@ -47,6 +47,8 @@ public class Inventory extends Application{
         comboBox.setPromptText("What is your favorite movie?");
         button.setOnAction(e -> printMovie());
 
+        comboBox.setOnAction( e -> System.out.println("User selected: " + comboBox.getValue()));
+
 
         //Layout
         VBox layout = new VBox(10);
