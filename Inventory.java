@@ -34,35 +34,35 @@ public class Inventory extends Application{
         //Our Main JavaFX code will go here! :)
 
         window = primaryStage;
-        window.setTitle("TreeView Example");
+        window.setTitle("TableView Example");
 
         //Button
         button = new Button("Click Me!");
 
-        TreeItem<String> root, rithdoc, jypzee;
+//        TreeItem<String> root, rithdoc, jypzee;
 
-        //Root Setup
-        root = new TreeItem<>();
-        root.setExpanded(true);
+//        //Root Setup
+//        root = new TreeItem<>();
+//        root.setExpanded(true);
 
-        //Rithdoc
-        rithdoc = makeBranch("Rithdoc", root);
-        makeBranch("mostamazing", rithdoc);
-        makeBranch("Twitch", rithdoc);
-        makeBranch("Nerfherder", rithdoc);
+//        //Rithdoc
+//        rithdoc = makeBranch("Rithdoc", root);
+//        makeBranch("mostamazing", rithdoc);
+//        makeBranch("Twitch", rithdoc);
+//        makeBranch("Nerfherder", rithdoc);
 
-        //Jypzee
-        jypzee= makeBranch("Jypzee", root);
-        makeBranch("Draenei", jypzee);
-        makeBranch("HotStuff", jypzee);
+//        //Jypzee
+//        jypzee= makeBranch("Jypzee", root);
+//        makeBranch("Draenei", jypzee);
+//        makeBranch("HotStuff", jypzee);
 
-        //Create tree
-        tree = new TreeView<>(root);
-        tree.setShowRoot(false);
+//        //Create tree
+//        tree = new TreeView<>(root);
+//        tree.setShowRoot(false);
 
         //Layout
-        StackPane layout = new StackPane();
-        layout.getChildren().add(tree);
+        VBox layout = new VBox();
+        layout.getChildren().addAll();
         //layout.setPadding(new Insets(20, 20, 20, 20));
         //layout.getChildren().addAll(button);
 
@@ -71,12 +71,12 @@ public class Inventory extends Application{
         window.show();
     }
 
-    //Create Branches method
-    public TreeItem<String> makeBranch(String content, TreeItem<String> parent){
-        TreeItem<String> item = new TreeItem(content);
-        item.setExpanded(true);
-        parent.getChildren().add(item);
-        return item;
-    }
+//    //Create Branches method
+//    public TreeItem<String> makeBranch(String content, TreeItem<String> parent){
+//        TreeItem<String> item = new TreeItem(content);
+//        item.setExpanded(true);
+//        parent.getChildren().add(item);
+//        return item;
+//    }
 
 }
