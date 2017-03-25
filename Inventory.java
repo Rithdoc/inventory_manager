@@ -24,7 +24,6 @@ public class Inventory extends Application{
     Stage window;
     Scene scene;
     Button button;
-    TreeView<String> tree;
 
     public static void main(String[] args) {
         launch(args);
@@ -54,6 +53,9 @@ public class Inventory extends Application{
         TableColumn<Product, String> quantityColumn = new TableColumn<>("Quantity");
         quantityColumn.setMinWidth(100);
         quantityColumn.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+
+        table = new TableView<>();
+
 
         //Layout
         VBox layout = new VBox();
