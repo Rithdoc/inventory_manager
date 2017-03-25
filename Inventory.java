@@ -49,7 +49,7 @@ public class Inventory extends Application{
         TableColumn<Product, String> priceColumn = new TableColumn<>("Price");
         priceColumn.setMinWidth(100);
         priceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
-        
+
 
         //Layout
         VBox layout = new VBox();
@@ -61,13 +61,5 @@ public class Inventory extends Application{
         window.setScene(scene);
         window.show();
     }
-
-//    //Create Branches method
-//    public TreeItem<String> makeBranch(String content, TreeItem<String> parent){
-//        TreeItem<String> item = new TreeItem(content);
-//        item.setExpanded(true);
-//        parent.getChildren().add(item);
-//        return item;
-//    }
 
 }
