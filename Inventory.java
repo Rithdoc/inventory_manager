@@ -24,6 +24,7 @@ public class Inventory extends Application{
     Stage window;
     Scene scene;
     Button button;
+    TableView<Product> table;
 
     public static void main(String[] args) {
         launch(args);
