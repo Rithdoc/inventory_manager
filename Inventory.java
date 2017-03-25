@@ -49,28 +49,7 @@ public class Inventory extends Application{
         TableColumn<Product, String> priceColumn = new TableColumn<>("Price");
         priceColumn.setMinWidth(100);
         priceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
-
-
-//        TreeItem<String> root, rithdoc, jypzee;
-
-//        //Root Setup
-//        root = new TreeItem<>();
-//        root.setExpanded(true);
-
-//        //Rithdoc
-//        rithdoc = makeBranch("Rithdoc", root);
-//        makeBranch("mostamazing", rithdoc);
-//        makeBranch("Twitch", rithdoc);
-//        makeBranch("Nerfherder", rithdoc);
-
-//        //Jypzee
-//        jypzee= makeBranch("Jypzee", root);
-//        makeBranch("Draenei", jypzee);
-//        makeBranch("HotStuff", jypzee);
-
-//        //Create tree
-//        tree = new TreeView<>(root);
-//        tree.setShowRoot(false);
+        
 
         //Layout
         VBox layout = new VBox();
