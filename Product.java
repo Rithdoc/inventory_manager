@@ -9,26 +9,14 @@ import javafx.geometry.*;
  */
 public class Product {
 
-    public static void display(String title, String message) {
-        Stage window = new Stage();
+    private String name;
+    private double price;
+    private int quantity;
 
-        window.initModality(Modality.APPLICATION_MODAL);
-        window.setTitle(title);
-        window.setMinWidth(250);
-
-        Label label = new Label();
-        label.setText(message);
-        Button closeButton = new Button("Close the window/modal now, please");
-        closeButton.setOnAction(e -> window.close());
-
-        VBox layout = new VBox(10);
-        layout.getChildren().addAll(label, closeButton);
-        layout.setAlignment(Pos.CENTER);
-
-        Scene scene = new Scene(layout);
-        window.setScene(scene);
-        window.showAndWait();
-
+    public Product(){
+        this.name = "";
+        this.price = 0;
+        this.quantity = 0;
     }
 
 }

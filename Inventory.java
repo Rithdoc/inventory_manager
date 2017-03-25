@@ -39,6 +39,11 @@ public class Inventory extends Application{
         //Button
         button = new Button("Click Me!");
 
+        //Name column
+        TableColumn<Product, String> nameColumn = new TableColumn<>("Name");
+        nameColumn.setMinWidth(200);
+        
+
 //        TreeItem<String> root, rithdoc, jypzee;
 
 //        //Root Setup
