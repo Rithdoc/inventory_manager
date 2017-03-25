@@ -6,6 +6,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import javafx.geometry.*;
@@ -42,7 +43,13 @@ public class Inventory extends Application{
         //Name column
         TableColumn<Product, String> nameColumn = new TableColumn<>("Name");
         nameColumn.setMinWidth(200);
-        
+        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+
+        //Price column
+        TableColumn<Product, String> priceColumn = new TableColumn<>("Price");
+        priceColumn.setMinWidth(100);
+        priceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
+
 
 //        TreeItem<String> root, rithdoc, jypzee;
 
