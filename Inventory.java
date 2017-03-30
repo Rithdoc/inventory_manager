@@ -57,9 +57,6 @@ public class Inventory extends Application{
 
         table = new TableView<>();
 
-        //Just returning to this after trip to Vail Colorado - what a STRANGE place!  Brought there by peculiar
-        // circumstance, Kaytie, my wife, sent there for a corporate celebration.
-
         //Layout
         VBox layout = new VBox();
         layout.getChildren().addAll();
