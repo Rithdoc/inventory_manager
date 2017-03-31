@@ -74,6 +74,10 @@ public class Inventory extends Application{
     public ObservableList<Product> getProduct(){
         ObservableList<Product> products = FXCollections.observableArrayList();
         products.add(new Product("Laptop", 859.00, 20));
+        products.add(new Product("Bouncy Ball", 2.49, 198));
+        products.add(new Product("Toilet", 99.00, 74));
+        products.add(new Product("The Notebook DVD", 19.99, 12));
+        products.add(new Product("Corn", 1.49, 856));
 
         return products;
     }
