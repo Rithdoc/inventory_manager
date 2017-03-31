@@ -1,4 +1,5 @@
 import javafx.application.Application;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -56,16 +57,24 @@ public class Inventory extends Application{
         quantityColumn.setCellValueFactory(new PropertyValueFactory<>("quantity"));
 
         table = new TableView<>();
+        table.setItems(getProduct());
+        table.getColumns().addAll(nameColumn, priceColumn, quantityColumn);
 
         //Layout
         VBox layout = new VBox();
-        layout.getChildren().addAll();
+        layout.getChildren().addAll(table);
         //layout.setPadding(new Insets(20, 20, 20, 20));
         //layout.getChildren().addAll(button);
 
         scene = new Scene(layout, 300, 250);
         window.setScene(scene);
         window.show();
+    }
+
+    public ObservableList<Product> getProduct(){
+        ObservableList<Product> products = FXCollections.observableArrayList();
+
+        return products;
     }
 
 }
