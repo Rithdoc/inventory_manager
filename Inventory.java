@@ -66,7 +66,7 @@ public class Inventory extends Application{
         //layout.setPadding(new Insets(20, 20, 20, 20));
         //layout.getChildren().addAll(button);
 
-        scene = new Scene(layout, 300, 250);
+        scene = new Scene(layout);
         window.setScene(scene);
         window.show();
     }
