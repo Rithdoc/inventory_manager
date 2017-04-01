@@ -68,6 +68,7 @@ public class Inventory extends Application{
 
         HBox hBox = new HBox();
         hBox.setPadding(new Insets(10, 10, 10, 10));
+        hBox.setSpacing(10);
 
         //Layout
         VBox layout = new VBox();
