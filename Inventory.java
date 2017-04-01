@@ -85,4 +85,8 @@ public class Inventory extends Application{
         return products;
     }
 
+    public void addButtonClicked(){
+        
+    }
+
 }
