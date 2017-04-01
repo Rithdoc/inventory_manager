@@ -24,7 +24,7 @@ public class Inventory extends Application{
 
     Stage window;
     Scene scene;
-    Button button;
+    Button addButton;
     TableView<Product> table;
     TextField nameInput, priceInput, quantityInput;
 
@@ -40,7 +40,7 @@ public class Inventory extends Application{
         window.setTitle("TableView Add and Delete");
 
         //Button
-        button = new Button("Click Me!");
+        addButton = new Button("Add");
 
         //Name column
         TableColumn<Product, String> nameColumn = new TableColumn<>("Name");
@@ -56,6 +56,8 @@ public class Inventory extends Application{
         TableColumn<Product, String> quantityColumn = new TableColumn<>("Quantity");
         quantityColumn.setMinWidth(100);
         quantityColumn.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+
+        addButton.setOnAction(e -> addButtonClicked());
 
         table = new TableView<>();
         table.setItems(getProduct());
