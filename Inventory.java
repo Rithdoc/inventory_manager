@@ -37,7 +37,7 @@ public class Inventory extends Application{
         //Our Main JavaFX code will go here! :)
 
         window = primaryStage;
-        window.setTitle("TableView Example");
+        window.setTitle("TableView Add and Delete");
 
         //Button
         button = new Button("Click Me!");
