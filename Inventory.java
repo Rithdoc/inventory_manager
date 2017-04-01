@@ -57,7 +57,10 @@ public class Inventory extends Application{
         quantityColumn.setMinWidth(100);
         quantityColumn.setCellValueFactory(new PropertyValueFactory<>("quantity"));
 
+        //Button Functions
         addButton.setOnAction(e -> addButtonClicked());
+        Button deleteButton = new Button("Delete");
+        deleteButton.setOnAction(e -> deleteButtonClicked());
 
         table = new TableView<>();
         table.setItems(getProduct());
@@ -94,6 +97,10 @@ public class Inventory extends Application{
         nameInput.clear();
         priceInput.clear();
         quantityInput.clear();
+    }
+
+    public void deleteButtonClicked(){
+        
     }
 
 }
