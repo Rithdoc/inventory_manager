@@ -66,6 +66,9 @@ public class Inventory extends Application{
         table.setItems(getProduct());
         table.getColumns().addAll(nameColumn, priceColumn, quantityColumn);
 
+        HBox hBox = new HBox();
+        hBox.setPadding(new Insets(10, 10, 10, 10));
+
         //Layout
         VBox layout = new VBox();
         layout.getChildren().addAll(table);
