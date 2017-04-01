@@ -100,7 +100,11 @@ public class Inventory extends Application{
     }
 
     public void deleteButtonClicked(){
-        
+        ObservableList<Product> productSelected, allProducts;
+        allProducts = table.getItems();
+        productSelected = table.getSelectionModel().getSelectedItems();
+
+        productSelected.forEach(allProducts::remove);
     }
 
 }
