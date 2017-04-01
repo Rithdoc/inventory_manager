@@ -86,7 +86,14 @@ public class Inventory extends Application{
     }
 
     public void addButtonClicked(){
-        
+        Product product = new Product();
+        product.setName(nameInput.getText());
+        product.setPrice(Double.parseDouble(priceInput.getText()));
+        product.setQuantity(Integer.parseInt(quantityInput.getText()));
+        table.getItems().add(product);
+        nameInput.clear();
+        priceInput.clear();
+        quantityInput.clear();
     }
 
 }
