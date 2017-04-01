@@ -69,10 +69,11 @@ public class Inventory extends Application{
         HBox hBox = new HBox();
         hBox.setPadding(new Insets(10, 10, 10, 10));
         hBox.setSpacing(10);
+        hBox.getChildren().addAll(nameInput, priceInput, quantityInput, addButton, deleteButton);
 
         //Layout
         VBox layout = new VBox();
-        layout.getChildren().addAll(table);
+        layout.getChildren().addAll(table, hBox);
         //layout.setPadding(new Insets(20, 20, 20, 20));
         //layout.getChildren().addAll(button);
 
