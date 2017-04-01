@@ -26,6 +26,7 @@ public class Inventory extends Application{
     Scene scene;
     Button button;
     TableView<Product> table;
+    TextField nameInput, priceInput, quantityInput;
 
     public static void main(String[] args) {
         launch(args);
